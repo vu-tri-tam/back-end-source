@@ -1,0 +1,186 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "userName":"vutritam1999",
+    "passWord":"12345678"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "userName":"vutritam",
+    "passWord":"12345678"
+}
+
+
+
+
+###
+POST http://localhost:5000/api/coin
+Content-Type: application/json
+
+{
+    "symbol": "POLSC",
+    "name": "PolsCoin",
+    "image": "./images/images (1).png",
+    "current_price": 0.0002433,
+    "market_cap": 120000,
+     "total_volume": 44005207418,
+     "circulating_supply": 18877543,
+    "total_supply": 21000000,
+    "max_supply": 21000000
+}
+
+
+
+
+###
+POST http://localhost:5000/api/like_author
+Content-Type: application/json
+
+{
+    "quantityLike": 2,
+    "access_times": 5,
+    "date": "2021-12-03T07:17:36.723Z"
+    
+}
+
+
+
+###
+POST http://localhost:5000/api/comment_user
+Content-Type: application/json
+
+
+{   
+    "content":"ok nha bạn ơi",
+    "user":"61ad8d99e5c6f20ed934d5c7",
+    "date": "2021-12-03T07:17:36.723Z"
+    
+}
+
+
+
+
+###
+GET http://localhost:5000/api/comment_user
+Content-Type: application/json
+
+
+
+
+
+
+
+###
+GET http://localhost:5000/api/coin
+Content-Type: application/json
+
+
+###
+GET http://localhost:5000/api/account/verify-account
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:5000/api/auth
+Authorization: :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFkOGQ5OWU1YzZmMjBlZDkzNGQ1YzciLCJ2ZXJpZnkiOnRydWUsInJvbGUiOmZhbHNlLCJpYXQiOjE2MzkxMjUyNzJ9.xUbB_t7QoCGmivFl6pH4WRFqSvxkYaropkXhHntKHoE
+
+
+
+###
+POST http://localhost:5000/api/account
+Content-Type: application/json
+Authorization: :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE1OGM0YmEzYTVjY2VlZGM5ZGM2YTMiLCJpYXQiOjE2MzgzMjc3NzF9.Y0WNZg4gexL4YVGdtLBtGIDY73rujGKLTwYFhGRAhtY
+
+
+{
+    "contries": "POccyyy",
+    "cccdFrontSide": "fsadasdasdks3452rfewsrfda",
+    "cccdBackSide": "fsadasdasdakkkksdse54ye5y456âsasasa",
+    "scanFace":"877873247237gđahsahdh73q47q3477",
+    "QRcode": "fffgdfgdzgdfgzdfgdgzdfgfdđdzgdzg",
+    "user":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE1OGM0YmEzYTVjY2VlZGM5ZGM2YTMiLCJpYXQiOjE2MzgzMjc3NzF9.Y0WNZg4gexL4YVGdtLBtGIDY73rujGKLTwYFhGRAhtY"
+}
+
+
+
+
+
+
+
+###
+PATCH  http://localhost:5000/api/auth/61a9c490f7f90e784f427bd8
+Content-Type: application/json
+Authorization: :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE5YzQ5MGY3ZjkwZTc4NGY0MjdiZDgiLCJ2ZXJpZnkiOnRydWUsInJvbGUiOmZhbHNlLCJpYXQiOjE2Mzg1MzQ4OTF9.1nJqj12WLtW0lRkeOKfwoO9eCASd9qgczZ6muojvwmQ
+
+
+{
+  
+ 
+  "userName": "vutritamcccc",
+  "passWord":"12345678",
+  "verify": true,
+  "role": true,
+  "total_assets": 100000,
+  "date": "2021-12-03T07:17:36.723Z"
+
+}
+
+
+
+
+###
+PATCH  http://localhost:5000/api/coin/619b5cf13b5b319c44c97b7b
+Content-Type: application/json
+
+
+{
+  
+    "symbol": "POLSC",
+    "name": "PolsCoin",
+    "image": "./images/polsc.png",
+    "current_price": 0.0002433,
+    "market_cap": 120000,
+     "total_volume": 44005207418,
+     "circulating_supply": 18877543,
+    "total_supply": 2100000,
+    "max_supply": 21000000,
+    "user_verify_kyc":[
+        {
+            "id_user":"61ad8d99e5c6f20ed934d5c7",
+               "date_kyc": "2021-12-23T13:12:17.455Z"
+        }
+    ]
+}
+
+
+
+###
+PATCH  http://localhost:5000/api/auth/updateWallet/61ad8d99e5c6f20ed934d5c7
+Authorization: :Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFkOGQ5OWU1YzZmMjBlZDkzNGQ1YzciLCJ2ZXJpZnkiOmZhbHNlLCJyb2xlIjpmYWxzZSwid2FsbGV0IjpbeyJ0b3RhbF9zd2FwIjo5OTk5Mi45ODYxNTgyMjcxNCwibmFtZV90b2tlbiI6ImJ1c2QiLCJpbWFnZV90b2tlbiI6Imh0dHBzOi8vYXNzZXRzLmNvaW5nZWNrby5jb20vY29pbnMvaW1hZ2VzLzk1NzYvbGFyZ2UvQlVTRC5wbmc_MTU2ODk0Nzc2NiIsImN1cnJlbnRfUHJpY2UiOjAuOTk5NSwiX2lkIjoiNjFkM2M2ODI5MGM4NmY1YWZjNjQxYzVmIn0seyJ0b3RhbF9zd2FwIjoyLjA3OTI5MTcxMDA3MTg4MTMsIm5hbWVfdG9rZW4iOiJ4cnAiLCJpbWFnZV90b2tlbiI6Imh0dHBzOi8vYXNzZXRzLmNvaW5nZWNrby5jb20vY29pbnMvaW1hZ2VzLzQ0L2xhcmdlL3hycC1zeW1ib2wtd2hpdGUtMTI4LnBuZz8xNjA1Nzc4NzMxIiwiY3VycmVudF9QcmljZSI6MC45NjE4NjYsIl9pZCI6IjYxZDNjNjgyOTBjODZmNWFmYzY0MWM2MCJ9LHsidG90YWxfc3dhcCI6My4yNTg2NjYwNjUxMTc2Nzg2LCJuYW1lX3Rva2VuIjoiYWRhIiwiaW1hZ2VfdG9rZW4iOiJodHRwczovL2Fzc2V0cy5jb2luZ2Vja28uY29tL2NvaW5zL2ltYWdlcy85NzUvbGFyZ2UvY2FyZGFuby5wbmc_MTU0NzAzNDg2MCIsImN1cnJlbnRfUHJpY2UiOjEuMjQsIl9pZCI6IjYxZDcwMTUxNjBkZmRlMDVhODFkNjMwMiJ9LHsidG90YWxfc3dhcCI6MC4wMTI5MjE1NjYwOTM4MTA1NywibmFtZV90b2tlbiI6Imx1bmEiLCJpbWFnZV90b2tlbiI6Imh0dHBzOi8vYXNzZXRzLmNvaW5nZWNrby5jb20vY29pbnMvaW1hZ2VzLzgyODQvbGFyZ2UvbHVuYTE1NTcyMjc0NzE2NjMucG5nPzE1NjcxNDcwNzIiLCJjdXJyZW50X1ByaWNlIjo3Ny4zOSwiX2lkIjoiNjFkNzAxNTE2MGRmZGUwNWE4MWQ2MzAzIn0seyJ0b3RhbF9zd2FwIjowLjAxNDA3MDc3MTgwMjczMDU2NSwibmFtZV90b2tlbiI6InNvbCIsImltYWdlX3Rva2VuIjoiaHR0cHM6Ly9hc3NldHMuY29pbmdlY2tvLmNvbS9jb2lucy9pbWFnZXMvNDEyOC9sYXJnZS9zb2xhbmEucG5nPzE2NDAxMzM0MjIiLCJjdXJyZW50X1ByaWNlIjoxNDMuNTYsIl9pZCI6IjYxZGVkZTc0NjBkZmRlMDVhODFkNmZmNSJ9LHsidG90YWxfc3dhcCI6MC4xMjU2MjM5NTk2NDY5MTA0OCwibmFtZV90b2tlbiI6InVuaSIsImltYWdlX3Rva2VuIjoiaHR0cHM6Ly9hc3NldHMuY29pbmdlY2tvLmNvbS9jb2lucy9pbWFnZXMvMTI1MDQvbGFyZ2UvdW5pc3dhcC11bmkucG5nPzE2MDAzMDY2MDQiLCJjdXJyZW50X1ByaWNlIjoxNS44NiwiX2lkIjoiNjFkZjllODI2MGRmZGUwNWE4MWQ3MDFmIn0seyJ0b3RhbF9zd2FwIjotMC4wMDEwNDQwMDE4NzIxOTk0NTA4LCJuYW1lX3Rva2VuIjoid2J0YyIsImltYWdlX3Rva2VuIjoiaHR0cHM6Ly9hc3NldHMuY29pbmdlY2tvLmNvbS9jb2lucy9pbWFnZXMvNzU5OC9sYXJnZS93cmFwcGVkX2JpdGNvaW5fd2J0Yy5wbmc_MTU0ODgyMjc0NCIsImN1cnJlbnRfUHJpY2UiOjQzNTI0LCJfaWQiOiI2MWRmYTA3NzYwZGZkZTA1YTgxZDcwMzQifSx7InRvdGFsX3N3YXAiOjYuMDE4MDgxNjc1MjE1OTQyLCJuYW1lX3Rva2VuIjoiZG9nZSIsImltYWdlX3Rva2VuIjoiaHR0cHM6Ly9hc3NldHMuY29pbmdlY2tvLmNvbS9jb2lucy9pbWFnZXMvNS9sYXJnZS9kb2dlY29pbi5wbmc_MTU0Nzc5MjI1NiIsImN1cnJlbnRfUHJpY2UiOjAuMTY1OTAxLCJfaWQiOiI2MWRmYTNhYTYwZGZkZTA1YTgxZDcwNWMifSx7InRvdGFsX3N3YXAiOi0xLjQ1MjI1NDQ1MjIxNDQ1MjMsIm5hbWVfdG9rZW4iOiJkYWkiLCJpbWFnZV90b2tlbiI6Imh0dHBzOi8vYXNzZXRzLmNvaW5nZWNrby5jb20vY29pbnMvaW1hZ2VzLzk5NTYvbGFyZ2UvNDk0My5wbmc_MTYzNjYzNjczNCIsImN1cnJlbnRfUHJpY2UiOjEsIl9pZCI6IjYxZGZhN2E2NjBkZmRlMDVhODFkNzBlOCJ9XSwiaWF0IjoxNjQyMDY3MjcwfQ.yiSyextWwbd8dvwYEtZjt4uHztkkgVTWGJNG2crU_aY
+
+
+{
+  
+  "wallet":[
+        {
+            "total_swap":100000,
+            "name_token":"busd",
+            "image_token":"https://assets.coingecko.com/coins/images/9576/large/BUSD.png?1568947766",
+            "current_Price":0.9995
+        },
+        {
+            "total_swap":2.0792917100718813,
+            "name_token":"xrp",
+            "image_token":"https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731",
+            "current_Price":0.961866
+        }
+  ]
+
+
+}
