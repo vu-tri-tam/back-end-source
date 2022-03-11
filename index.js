@@ -65,7 +65,7 @@ const connectDB = async () => {
 // io.connect('https://api.coingecko.com/api/v3/', connectionOptions);
 
 app.get('/', (req, res) => res.send('hello world'))
-server.listen(process.env.PORT || 5000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('Server is listening on port 5000');
 });
 
