@@ -16,9 +16,9 @@ const server = http.createServer(app)
 // const bodyParser = require('body-parser');
 // const pino = require('express-pino-logger')();
 // const client = new Client(sid, tkn);
-const accountSid = "AC1cc8e4d358f97b816bc11a1b32a8aadb"; // Your Account SID from www.twilio.com/console
-const authToken = "ffe2f273ce795eeb5d2b583e59caae5f";   // Your Auth Token from www.twilio.com/console
-var client = require('twilio')(accountSid, authToken);
+// const accountSid = "AC1cc8e4d358f97b816bc11a1b32a8aadb"; // Your Account SID from www.twilio.com/console
+// const authToken = "ffe2f273ce795eeb5d2b583e59caae5f";   // Your Auth Token from www.twilio.com/console
+// var client = require('twilio')(accountSid, authToken);
 // const delay = require('delay')
 const connectDB = async () => {
 
@@ -84,23 +84,23 @@ app.use('/api/coin', coinRoute)
 app.use('/api/account', verifyRoute)
 app.use('/api/like_author', countLikeRoute)
 app.use('/api/comment_user', commentRoute)
-app.post('/api/messages', (req, res) => {
-    res.header('Content-Type', 'application/json')
-    console.log(req.body);
-    client.messages
-        .create({
-            from: "+15005550001",
-            to: req.body.to,
-            body: req.body.body
-        })
-        .then(() => {
-            res.send(JSON.stringify({ success: true }));
-        })
-        .catch(err => {
-            console.log(err);
-            res.send(JSON.stringify({ success: false }));
-        });
-});
+// app.post('/api/messages', (req, res) => {
+//     res.header('Content-Type', 'application/json')
+//     console.log(req.body);
+//     client.messages
+//         .create({
+//             from: "+15005550001",
+//             to: req.body.to,
+//             body: req.body.body
+//         })
+//         .then(() => {
+//             res.send(JSON.stringify({ success: true }));
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.send(JSON.stringify({ success: false }));
+//         });
+// });
 
 
 
