@@ -22,7 +22,6 @@
     "socket.io": "^4.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "twilio": "^3.71.2"
+    "nodemon": "^2.0.15"
   }
 }
